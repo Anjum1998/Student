@@ -25,7 +25,18 @@ public class Student {
             int n = sc.nextInt();
             switch(n)
             {
-
+                case 1:
+                    System.out.println("Enter the Name");
+                    String name=sc.next();
+                    System.out.println("Enter the RollNo");
+                    int rollNo= sc.nextInt();
+                    System.out.println("Enter the Admission No");
+                    String AdNo=sc.next();
+                    System.out.println("Enter the college");
+                    String college= sc.next();
+                    stud s=new stud(name,rollNo,AdNo,college);
+                    arr.add(s);
+                    break;
             }
         }
 
