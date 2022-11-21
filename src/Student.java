@@ -47,6 +47,25 @@ public class Student {
                         System.out.println(student.college);
                     }
                     break;
+                case 3:
+                    System.out.println("Enter the Admission No");
+                    String ad=sc.next();
+                    for(stud st : arr)
+                    {
+                       if(st.admissionNo.equals(ad))
+                       {
+                           System.out.println("Student Found");
+                           System.out.println(st.name);
+                           System.out.println(st.rollNo);
+                           System.out.println(st.admissionNo);
+                           System.out.println(st.college);
+                           break;
+                       }
+                       else {
+                           System.out.println("student not found");
+                       }
+                    }
+                    break;
             }
         }
 
