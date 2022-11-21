@@ -78,6 +78,11 @@ public class Student {
                         }
                     }
                     break;
+                case 5:
+                    System.out.println("Exiting...");
+                    System.exit(0);
+                default:
+                    System.out.println("invalid choice");
             }
         }
 
