@@ -66,6 +66,18 @@ public class Student {
                        }
                     }
                     break;
+                case 4:
+                    System.out.println("Enter the Admission No");
+                    String a=sc.next();
+                    for(stud s1 : arr)
+                    {
+                       // if(s1.admissionNo.equals(a))
+                        if(a.equals(s1.admissionNo))
+                        {
+                            arr.remove(s1);
+                        }
+                    }
+                    break;
             }
         }
 
