@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,10 +19,11 @@ class stud
 }
 public class Student {
     public static void main(String[] args) {
+        ArrayList<String> jsonArr=new ArrayList<>();
         ArrayList<stud> arr=new ArrayList<stud>();
         while(true)
         {
-            System.out.println("Select an option \n 1.Add Student \n 2.View Student \n 3.Search Student \n 4.Delete student \n 5.Exit");
+            System.out.println("Select an option \n 1.Add Student \n 2.View Student \n 3.Search Student \n 4.Delete student \n 5.json \n 6.Exit");
             Scanner sc=new Scanner(System.in);
             int n = sc.nextInt();
             switch(n)
@@ -36,6 +39,7 @@ public class Student {
                     String college= sc.next();
                     stud s=new stud(name,rollNo,AdNo,college);
                     arr.add(s);
+                    jsonArr.add(new Gson().toJson(s));
                     break;
                 case 2:
                     System.out.println("Display Student Details");
@@ -75,10 +79,15 @@ public class Student {
                         if(a.equals(s1.admissionNo))
                         {
                             arr.remove(s1);
+                            break;
                         }
                     }
                     break;
                 case 5:
+                    System.out.println(jsonArr);
+                    break;
+
+                case 6:
                     System.out.println("Exiting...");
                     System.exit(0);
                 default:
